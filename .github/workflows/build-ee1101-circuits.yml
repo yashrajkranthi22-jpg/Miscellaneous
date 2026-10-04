@@ -1,0 +1,62 @@
+name: Build EE1101 Circuit PDF
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "IMG_*.jpg"
+      - ".github/workflows/build-ee1101-circuits.yml"
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Convert circuit JPGs to PDF
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+
+          files = sorted(Path(".").glob("IMG_*.jpg"))
+
+          if not files:
+              raise SystemExit("No IMG_*.jpg files found")
+
+          images = [Image.open(p).convert("RGB") for p in files]
+
+          out = Path("EE1101_circuits.pdf")
+          images[0].save(
+              out,
+              "PDF",
+              save_all=True,
+              append_images=images[1:],
+              resolution=150.0
+          )
+
+          print(f"Created {out} from {len(images)} images")
+          for p in files:
+              print(f" - {p}")
+
+          for im in images:
+              im.close()
+          PY
+
+      - name: Upload circuit PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: EE1101-circuits-pdf
+          path: EE1101_circuits.pdf
+          retention-days: 7
