@@ -1,0 +1,46 @@
+.include "m328Pdef.inc"
+
+.cseg
+.org 0x0000
+    rjmp reset
+
+reset:
+    ldi r16, high(RAMEND)
+    out SPH, r16
+    ldi r16, low(RAMEND)
+    out SPL, r16
+
+    ldi r16, 0b00111100
+    out DDRD, r16
+
+    clr r17
+
+counter_loop:
+    mov r16, r17
+    lsl r16
+    lsl r16
+    out PORTD, r16
+
+    rcall delay
+
+    inc r17
+    cpi r17, 10
+    brlo counter_loop
+
+    clr r17
+    rjmp counter_loop
+
+delay:
+    ldi r18, 80
+delay_outer:
+    ldi r19, 255
+delay_middle:
+    ldi r20, 255
+delay_inner:
+    dec r20
+    brne delay_inner
+    dec r19
+    brne delay_middle
+    dec r18
+    brne delay_outer
+    ret
