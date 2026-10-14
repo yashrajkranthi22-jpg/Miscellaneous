@@ -1,0 +1,25 @@
+#define F_CPU 16000000UL
+
+#include <avr/io.h>
+#include <util/delay.h>
+#include <stdint.h>
+
+#define BCD_MASK 0x3C
+
+int main(void) {
+    DDRD |= BCD_MASK;
+
+    uint8_t count = 0;
+
+    while (1) {
+        PORTD = (PORTD & (uint8_t)~BCD_MASK)
+              | ((count & 0x0F) << 2);
+
+        _delay_ms(1000);
+        count++;
+
+        if (count == 10) {
+            count = 0;
+        }
+    }
+}
