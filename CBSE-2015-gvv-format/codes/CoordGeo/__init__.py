@@ -1,1 +1,1 @@
-"""Small compatible subset of the CoordGeo helpers used by these figures."""
+"""Coordinate-geometry helpers used by the generated CBSE figures."""

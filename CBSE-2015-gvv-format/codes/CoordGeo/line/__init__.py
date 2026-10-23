@@ -1,1 +1,1 @@
-"""Line geometry helpers."""
+from .funcs import line_gen

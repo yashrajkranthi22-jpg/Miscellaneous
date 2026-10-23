@@ -1,0 +1,134 @@
+% Formula sheet comes before every worked question.  Equation tags F1, F2, ...
+% keep this reference sheet distinguishable from equations numbered by question.
+\renewcommand{\theequation}{F\arabic{equation}}
+\setcounter{equation}{0}
+
+\subsubsection*{1. Quadratic equations and algebra}
+For $ax^2+bx+c=0$ with $a\ne0$, the discriminant and roots are
+\begin{equation}
+\Delta=b^2-4ac,\qquad x=\frac{-b\pm\sqrt{\Delta}}{2a}.
+\label{eq:quad-general}
+\end{equation}
+Equal real roots occur exactly when $\Delta=0$. The condition $a\ne0$ matters: if the leading coefficient vanishes, the equation is no longer quadratic.
+
+The difference-of-squares identity is
+\begin{equation}
+ u^2-v^2=(u-v)(u+v).
+\label{eq:difference-squares}
+\end{equation}
+It is useful to factor an expression before applying the quadratic formula when the factors are visible.
+
+\subsubsection*{2. Right-triangle trigonometry and motion}
+For angle $\theta$ in a right triangle,
+\begin{equation}
+\tan\theta=\frac{\text{opposite}}{\text{adjacent}},\quad
+\sin\theta=\frac{\text{opposite}}{\text{hypotenuse}},\quad
+\cos\theta=\frac{\text{adjacent}}{\text{hypotenuse}}.
+\label{eq:trig-ratios}
+\end{equation}
+The standard values used in this paper are $\tan30^\circ=1/\sqrt3$, $\tan60^\circ=\sqrt3$, $\sin30^\circ=1/2$, and $\cos60^\circ=1/2$. For a right triangle with legs $a,b$ and hypotenuse $c$,
+\begin{equation}
+c^2=a^2+b^2,\qquad \|(x,y)^T\|=\sqrt{x^2+y^2}.
+\label{eq:pythagoras-distance}
+\end{equation}
+The second identity is the Euclidean length of a displacement vector, so it is also the usual coordinate-distance formula.
+
+Uniform motion over a straight path obeys
+\begin{equation}
+\text{distance}=\text{speed}\times\text{time},\qquad
+\text{average speed}=\frac{\text{total distance}}{\text{total time}}.
+\label{eq:speed-time}
+\end{equation}
+For an object at fixed height $h$ observed from a point on level ground, horizontal range is $x=h\cot\theta$.
+
+\subsubsection*{3. Probability}
+For equally likely outcomes,
+\begin{equation}
+P(E)=\frac{n(E)}{n(S)}.
+\label{eq:prob-classical}
+\end{equation}
+For two events, inclusion--exclusion gives
+\begin{equation}
+P(A\cup B)=P(A)+P(B)-P(A\cap B),\qquad
+P(A^c)=1-P(A).
+\label{eq:prob-union}
+\end{equation}
+When two distinct dice are tossed, the sample space has $6\cdot6=36$ ordered outcomes; order is retained because the dice are different.
+
+\subsubsection*{4. Circle geometry and tangents}
+A radius is perpendicular to the tangent at the point of contact. Tangents drawn from the same external point are equal. The angle between a tangent and a chord equals the angle subtended by that chord in the alternate segment. An angle at the centre is twice an angle at the circumference standing on the same arc.
+
+If a triangle has inradius $r$ and semiperimeter $s$, then
+\begin{equation}
+[ABC]=rs,\qquad s=\frac{AB+BC+CA}{2}.
+\label{eq:triangle-inradius}
+\end{equation}
+Tangents drawn from the same point to a circle have equal lengths; this lets us express two sides of a circumscribed triangle using the tangent lengths and the in-touchpoint partition of its base.
+
+\subsubsection*{5. Arithmetic progressions}
+For first term $a$ and common difference $d$,
+\begin{equation}
+t_n=a+(n-1)d,\qquad S_n=\frac{n}{2}\bigl(2a+(n-1)d\bigr)=\frac n2(a+t_n).
+\label{eq:ap}
+\end{equation}
+Two independent linear relations in $a$ and $d$ can be solved as a matrix system rather than by ad hoc elimination.
+
+\subsubsection*{6. Coordinate geometry as linear algebra}
+Represent a point $P(x,y)$ by the column vector $\vec p=\myvec{x\\y}$. Then
+\begin{equation}
+\overrightarrow{PQ}=\vec q-\vec p,\qquad
+\vec u\cdot\vec v=u_xv_x+u_yv_y.
+\label{eq:vector-basics}
+\end{equation}
+Perpendicular vectors have zero dot product. For $A(x_1,y_1)$, $B(x_2,y_2)$, and $C(x_3,y_3)$, collinearity is equivalent to the vanishing determinant
+\begin{equation}
+\mydet{x_2-x_1&y_2-y_1\\x_3-x_1&y_3-y_1}=0.
+\label{eq:collinear-det}
+\end{equation}
+The area of a triangle is half the absolute value of the same determinant:
+\begin{equation}
+[ABC]=\frac12\left|\mydet{x_2-x_1&y_2-y_1\\x_3-x_1&y_3-y_1}\right|.
+\label{eq:triangle-det}
+\end{equation}
+For a point dividing $AB$ internally in ratio $AP:PB=m:n$,
+\begin{equation}
+\vec p=\frac{n\vec a+m\vec b}{m+n}=\vec a+\frac{m}{m+n}(\vec b-\vec a).
+\label{eq:section-vector}
+\end{equation}
+A $2\times2$ linear system $M\vec z=\vec b$ with nonzero determinant has solution $\vec z=M^{-1}\vec b$. This is especially useful for AP data and height--distance systems.
+
+\subsubsection*{7. Sectors and circular segments}
+For radius $r$ and central angle $\theta$ measured in degrees,
+\begin{equation}
+A_{\rm sector}=\frac{\theta}{360^\circ}\pi r^2,\qquad
+A_{\rm segment}=A_{\rm sector}-A_{\triangle}.
+\label{eq:sector-segment}
+\end{equation}
+For two radii enclosing angle $\theta$, the included triangle has area $\frac12r^2\sin\theta$.
+
+\subsubsection*{8. Surface area and volume}
+The formulae needed for this paper are
+\begin{align}
+V_{\rm cylinder}&=\pi r^2h,& A_{\rm curved,cylinder}&=2\pi rh,\label{eq:cylinder-formula}\\
+V_{\rm cone}&=\frac13\pi r^2h,& A_{\rm curved,cone}&=\pi r\ell,\quad \ell=\sqrt{r^2+h^2},\label{eq:cone-formula}\\
+V_{\rm sphere}&=\frac43\pi r^3,& A_{\rm sphere}&=4\pi r^2,\label{eq:sphere-formula}\\
+V_{\rm hemisphere}&=\frac23\pi r^3,& A_{\rm curved,hemisphere}&=2\pi r^2.\label{eq:hemisphere-formula}
+\end{align}
+In a recasting problem, material volume is conserved. For a cylinder with two hemispherical cavities of radius $r$, the remaining volume is
+\begin{equation}
+V_{\rm remaining}=\pi r^2h-\frac43\pi r^3.
+\label{eq:scooped-cylinder}
+\end{equation}
+For a cube of side $a$ with a hemisphere of radius $r$ on its top face, the exposed area is $5a^2+(a^2-\pi r^2)+2\pi r^2=6a^2+\pi r^2$.
+
+\subsubsection*{9. Similarity and construction}
+If two triangles are similar with corresponding base lengths $b_1,b_2$, every corresponding linear dimension scales by
+\begin{equation}
+k=\frac{b_2}{b_1},\qquad
+\frac{\text{corresponding side}_2}{\text{corresponding side}_1}=k.
+\label{eq:similarity}
+\end{equation}
+A straight line drawn parallel to one side of a triangle produces a similar triangle (the intercept theorem). This justifies the compass-and-straightedge enlargement used in Q26.
+
+\subsubsection*{10. A modelling note}
+Formulae are written here before the questions to make assumptions visible. In the solutions below, a formula is substituted only after its conditions have been checked (for example, a nonzero quadratic coefficient, a right-angle configuration, or an equal-likelihood sample space).

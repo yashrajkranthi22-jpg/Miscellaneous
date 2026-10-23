@@ -1,13 +1,6 @@
-class,section,source_question,status,math_checked,source_checked,figure_script,figure_generated,notes
-X,A,1,solved,yes,no,,n/a,Discriminant yields p=3 after rejecting p=0 as not quadratic
-X,A,2,solved,yes,yes,codes/Tower.py,yes,Official marking scheme confirms 20sqrt(3) m; angle is 30 degrees
-X,A,3,solved,yes,no,,n/a,Probability 1/9
-X,A,4,solved,yes,yes,codes/TangentChord.py,yes,Official figure places R on minor arc PQ; center-angle derivation gives 120 degrees
-X,B,5,solved,yes,no,codes/TwoTangents.py,yes,Proof uses equal tangents and right triangle
-XII,Vectors,1,conditional,yes,no,,n/a,Source wording incomplete; assumes perpendicular to both
-XII,Vectors,2,conditional,yes,no,,n/a,Source repeats OA for second vector; conditional answer assumes OB=b
-XII,Vectors,3,solved,yes,no,,n/a,Result 2a^2
-XII,Vectors,4,solved,yes,no,,n/a,y=+/-2sqrt(10)
-XII,Vectors,5,solved,yes,no,,n/a,d=(96,-3,-42)
-XII,Vectors,6,solved,yes,no,,n/a,Parallel-line distance sqrt(5/29)
-XII,Vectors,7,solved,yes,no,,n/a,Unit normal +/- (2,-1,4)/sqrt(21)
+class,section,questions,status,primary_source,notes
+10,A,Q1-Q4,verified,Official CBSE 30/1 PDF,Discriminant; trig; probability; chord-tangent geometry
+10,B,Q5-Q10,verified,Official CBSE 30/1 PDF,Tangent proof; inradius; quadratic; AP matrix; dot product; collinearity determinant
+10,C,Q11-Q20,verified,Official CBSE 30/1 PDF,AP; quadratic; elevation; section formula; probability; segments; tent; volume; composite solid; recasting
+10,D,Q21-Q31,verified,Official CBSE 30/1 PDF,Quadratic models; AP; speed; circle proofs; construction; reflection; cards; determinant area; flower-bed segments; recasting
+12,not started,all,pending,Existing class12.tex retained but excluded,Wait for Class X format sign-off

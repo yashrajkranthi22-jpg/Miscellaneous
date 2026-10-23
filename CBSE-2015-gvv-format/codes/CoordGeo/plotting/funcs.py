@@ -1,13 +1,17 @@
-# CoordGeo plotting helpers; label_pts matches the course repository API.
+"""Small labelling helper shared by the geometry plotting scripts."""
 import numpy as np
-import matplotlib.pyplot as plt
 
-def label_pts(G_v, vert_labels, offsets=None):
-    G_v = np.asarray(G_v, dtype=float)
-    if G_v.ndim == 1:
-        G_v = G_v.reshape(2, 1)
+def label_pts(points, labels, offsets=None, ax=None):
+    """Label 2D column vectors; offsets are point offsets in screen points."""
+    import matplotlib.pyplot as plt
+    ax = ax or plt.gca()
+    p = np.asarray(points, dtype=float)
+    if p.ndim == 1:
+        p = p.reshape(2, 1)
+    if p.shape[0] != 2:
+        p = p.T
     if offsets is None:
-        offsets = [(0, 10)] * G_v.shape[1]
-    for i, txt in enumerate(vert_labels):
-        plt.annotate(txt, (G_v[0, i], G_v[1, i]), textcoords="offset points",
-                     xytext=offsets[i], ha="center")
+        offsets = [(5, 5)] * len(labels)
+    for i, label in enumerate(labels):
+        ax.annotate(label, (p[0, i], p[1, i]), xytext=offsets[i],
+                    textcoords="offset points", fontsize=10)

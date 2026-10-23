@@ -1,1 +1,1 @@
-"""Triangle helpers namespace retained to mirror the reference directory tree."""
+from .funcs import area2d

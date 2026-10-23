@@ -1,1 +1,1 @@
-"""Matrix helpers namespace retained to mirror the reference directory tree."""
+from .funcs import dot, det2, triangle_area

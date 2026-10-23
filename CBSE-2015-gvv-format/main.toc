@@ -1,7 +1,7 @@
-\contentsline {section}{\numberline {1}Class X Mathematics}{4}{section.3}%
-\contentsline {subsection}{\numberline {1.1}Section A}{4}{subsection.4}%
-\contentsline {subsection}{\numberline {1.2}Section B}{6}{subsection.26}%
-\contentsline {subsection}{\numberline {1.3}Batch audit}{7}{subsection.36}%
-\contentsline {section}{\numberline {2}Class XII Mathematics}{8}{section.37}%
-\contentsline {subsection}{\numberline {2.1}Vectors}{8}{subsection.38}%
-\contentsline {subsection}{\numberline {2.2}Source audit notes}{10}{subsection.70}%
+\contentsline {section}{\numberline {1}Class X Mathematics -- Code 30/1}{4}{section.3}%
+\contentsline {subsection}{\numberline {1.1}Formulae}{4}{subsection.4}%
+\contentsline {subsection}{\numberline {1.2}Questions and worked solutions}{7}{subsection.35}%
+\contentsline {subsubsection}{\numberline {1.2.1}Section A -- 1 mark each}{7}{subsubsection.36}%
+\contentsline {subsubsection}{\numberline {1.2.2}Section B -- 2 marks each}{8}{subsubsection.48}%
+\contentsline {subsubsection}{\numberline {1.2.3}Section C -- 3 marks each}{11}{subsubsection.57}%
+\contentsline {subsubsection}{\numberline {1.2.4}Section D -- 4 marks each}{16}{subsubsection.71}%

@@ -10,7 +10,7 @@
 \lstset{aboveskip=12pt}
 \usepackage[center]{caption}
 \raggedbottom
-\hypersetup{colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black,hypertexnames=false,pdftitle={CBSE Mathematics 2015 - Class X and Class XII}}
+\hypersetup{colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black,hypertexnames=false,pdftitle={CBSE Mathematics 2015 - Class X, Code 30/1}}
 \usepackage{amsfonts}
 \makeindex
 
@@ -22,32 +22,35 @@
   \begin{center}
     CBSE Mathematics 2015\\
     \rule{0.4\columnwidth}{0.4pt}\\
-    Class X and Class XII
+    Class X -- Outside Delhi, Code 30/1
   \end{center}
 }
 \author{
   \vspace{2cm}
   \begin{center}
-    \includegraphics[width=0.18\columnwidth]{figs/logo.jpg}\\[4pt]
-    {\large Working solutions and source audit}
+    \includegraphics[width=0.18\columnwidth]{figs/logo}\\[4pt]
+    {\large Formula-first worked solutions with matrix methods}
   \end{center}
 }
 \maketitle
 \newpage
 
-\section*{About this working file}
-This project follows the folder and LaTeX conventions used in
-\href{https://github.com/gadepall/ee1010-2026/tree/master/EE26BTECH11202}{the EE1010 course folder}:
-questions and solutions are stored in \texttt{chapters/}; plotting scripts and the
-\texttt{CoordGeo} helper package are under \texttt{codes/}; generated figures are under
-\texttt{figs/}; and the root document imports the style files \texttt{gvv-book.sty}
-and \texttt{gvv.sty}. The figures included here are produced by Python scripts, not drawn
-manually inside the LaTeX questions.
+\section*{Scope and source audit}
+This build intentionally covers only the Class X Mathematics paper with code 30/1.
+The official CBSE paper has 31 questions: Section A (Q1--4), Section B (Q5--10),
+Section C (Q11--20), and Section D (Q21--31). Class XII is left out of this build
+until the Class X layout and verification pass are finalized.
 
-\textbf{Audit status.} The current batch includes Class X questions 1--4 from Section A, question 5 from Section B, and
-Class XII Vectors questions 1--7 from the cited public transcriptions. Class X question 2 has been checked against the official marking scheme. Class XII vector
-questions 1--2 retain source-wording flags and remain conditional. The Class X chord/tangent
-figure has been redrawn with the official point placement and its angle derived accordingly.
+The solutions state the general formulae first and refer back to them when solving
+individual questions. Coordinate-geometry work is expressed with vectors, dot
+products, determinants, and matrix systems wherever that makes the reasoning clearer.
+The level of mathematics is deliberately enriched, but each solution still gives a
+short path to the requested school-level result. Comments in the source files explain
+why a particular method is selected; they are mathematical teaching notes rather than
+an unfiltered private reasoning trace.
+
+Primary source: official CBSE 2015 paper 30/1 and the corresponding marking scheme.
+The source audit records transcription mismatches in \texttt{STRUCTURE\_AUDIT.md}.
 
 \newpage
 \tableofcontents
@@ -56,11 +59,11 @@ figure has been redrawn with the official point placement and its angle derived 
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
 
-\section{Class X Mathematics}
-\input{chapters/class10.tex}
-
+\section{Class X Mathematics -- Code 30/1}
+\subsection{Formulae}
+\input{chapters/class10_formulae.tex}
 \newpage
-\section{Class XII Mathematics}
-\input{chapters/class12.tex}
+\subsection{Questions and worked solutions}
+\input{chapters/class10.tex}
 
 \end{document}
