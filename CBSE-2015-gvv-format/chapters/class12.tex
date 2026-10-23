@@ -1,0 +1,113 @@
+% Class XII source questions transcribed from gadepall/cbse-papers, 2015/math/12.
+% Source is titled "2015 12th Set-3"; it is a chapter-organized collection, not yet matched to one official paper.
+\subsection{Vectors}
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+
+\item Find a vector of magnitude $\sqrt{171}$ which is "to both" of the vectors $\vec a=\hat i-2\hat j-3\hat k$ and $\vec b=3\hat i-\hat j-2\hat k$. \hfill (Source wording retained)
+
+\solution
+\textbf{Wording flag.} The source sentence omits the relation intended by “to both”. The following result assumes it means “perpendicular to both”. A vector perpendicular to both $\vec a$ and $\vec b$ is parallel to their cross product:
+\begin{align}
+ \vec a\times\vec b
+ &=\begin{vmatrix}\hat i&\hat j&\hat k\\1&-2&-3\\3&-1&-2\end{vmatrix}\\
+ &=\hat i-7\hat j+5\hat k.
+\end{align}
+Its magnitude is $\sqrt{1+49+25}=\sqrt{75}$. Multiplying by $\sqrt{171}/\sqrt{75}=\sqrt{57}/5$ gives the required magnitude. Under the perpendicular interpretation,
+\begin{align}
+ \boxed{\vec v=\pm\frac{\sqrt{57}}{5}\left(\hat i-7\hat j+5\hat k\right)}.
+\end{align}
+Confirm the missing word against the original source before final submission.
+
+\item In triangle $OAC$, $B$ is the midpoint of $AC$. The source then states $\overrightarrow{OA}=\vec a$, $\overrightarrow{OA}=\vec b$ and asks for $\overrightarrow{OC}$. \hfill (Source wording retained)
+
+\solution
+\textbf{Wording flag.} The source repeats $\overrightarrow{OA}$ in the second given vector; taken literally, the information does not determine $\overrightarrow{OC}$. If the second vector was intended to be $\overrightarrow{OB}=\vec b$, then the midpoint relation gives
+\begin{align}
+ \overrightarrow{OB}&=\frac{\overrightarrow{OA}+\overrightarrow{OC}}{2},\\
+ \vec b&=\frac{\vec a+\overrightarrow{OC}}{2},\\
+ \boxed{\overrightarrow{OC}=2\vec b-\vec a}.
+\end{align}
+This is a conditional answer only; verify the vector named in the source.
+
+\item If $|\vec a|=a$, find
+\[
+ |\vec a\times\hat i|^2+|\vec a\times\hat j|^2+|\vec a\times\hat k|^2.
+\]
+
+\solution
+Write $\vec a=a_x\hat i+a_y\hat j+a_z\hat k$. Then
+\begin{align}
+ |\vec a\times\hat i|^2&=a_y^2+a_z^2,\\
+ |\vec a\times\hat j|^2&=a_x^2+a_z^2,\\
+ |\vec a\times\hat k|^2&=a_x^2+a_y^2.
+\end{align}
+Adding these expressions gives
+\begin{align}
+ 2(a_x^2+a_y^2+a_z^2)=2|\vec a|^2=\boxed{2a^2}.
+\end{align}
+
+\item The vectors $\vec a=3\hat i+x\hat j$ and $\vec b=2\hat i+\hat j+y\hat k$ are mutually perpendicular. If $|\vec a|=|\vec b|$, find $y$.
+
+\solution
+Perpendicularity gives
+\begin{align}
+ \vec a\cdot\vec b=6+x=0\quad\Rightarrow\quad x=-6.
+\end{align}
+Equality of magnitudes then gives
+\begin{align}
+ 9+x^2&=2^2+1^2+y^2,\\
+ 9+36&=5+y^2,\\
+ y^2&=40.
+\end{align}
+Therefore, both real values are
+\begin{align}
+ \boxed{y=\pm2\sqrt{10}}.
+\end{align}
+
+\item Let $\vec a=\hat i+4\hat j+2\hat k$, $\vec b=3\hat i-2\hat j+7\hat k$ and $\vec c=2\hat i-\hat j+4\hat k$. Find $\vec d$ perpendicular to both $\vec a$ and $\vec b$ such that $\vec c\cdot\vec d=27$.
+
+\solution
+A vector perpendicular to both $\vec a$ and $\vec b$ is proportional to $\vec a\times\vec b$:
+\begin{align}
+ \vec a\times\vec b&=\begin{vmatrix}\hat i&\hat j&\hat k\\1&4&2\\3&-2&7\end{vmatrix}=32\hat i-\hat j-14\hat k.
+\end{align}
+Since $\vec c\cdot(\vec a\times\vec b)=2(32)+(-1)(-1)+4(-14)=9$, choosing the scale factor $3$ yields the required dot product. Thus
+\begin{align}
+ \boxed{\vec d=96\hat i-3\hat j-42\hat k}.
+\end{align}
+
+\item Find the shortest distance between the lines
+\begin{align*}
+ \vec r&=(\hat i+2\hat j+3\hat k)+\lambda(2\hat i+3\hat j+4\hat k),\\
+ \vec r&=(2\hat i+4\hat j+5\hat k)+\mu(4\hat i+6\hat j+8\hat k).
+\end{align*}
+
+\solution
+The direction vectors are proportional, so the lines are parallel. Let $\vec a=(1,2,3)$ be a point on the first line, $\vec b=(2,4,5)$ be a point on the second, and $\vec v=(2,3,4)$ be their common direction. The distance between parallel lines is
+\begin{align}
+ d&=\frac{|(\vec b-\vec a)\times\vec v|}{|\vec v|}\\
+ &=\frac{|(1,2,2)\times(2,3,4)|}{\sqrt{2^2+3^2+4^2}}\\
+ &=\frac{\sqrt{2^2+0^2+(-1)^2}}{\sqrt{29}}.
+\end{align}
+Hence $\boxed{d=\sqrt{\frac{5}{29}}}$.
+
+\item Find a unit vector perpendicular to the plane of triangle $ABC$, where $A(3,-1,2)$, $B(1,-1,3)$ and $C(4,-3,1)$.
+
+\solution
+The two side vectors from $A$ are
+\begin{align}
+ \overrightarrow{AB}&=(-2,0,1),&\overrightarrow{AC}&=(1,-2,-1).
+\end{align}
+Their cross product is a normal vector to the plane:
+\begin{align}
+ \overrightarrow{AB}\times\overrightarrow{AC}&=(2,-1,4),\\
+ |\overrightarrow{AB}\times\overrightarrow{AC}|&=\sqrt{2^2+(-1)^2+4^2}=\sqrt{21}.
+\end{align}
+Therefore the two possible unit normals are
+\begin{align}
+ \boxed{\pm\frac{2\hat i-\hat j+4\hat k}{\sqrt{21}}}.
+\end{align}
+\end{enumerate}
+
+\subsection{Source audit notes}
+The first two vector questions contain wording/notation defects in the source transcription and remain conditional as marked above. The complete source includes further topic sections and a duplicated plane question; those have not yet been fully migrated or solved in this working batch.

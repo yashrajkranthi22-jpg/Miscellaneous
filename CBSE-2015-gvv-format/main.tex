@@ -1,0 +1,66 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper,margin=10mm]{geometry}
+\usepackage{tfrupee}
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{graphicx}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usetikzlibrary{patterns}
+\lstset{aboveskip=12pt}
+\usepackage[center]{caption}
+\raggedbottom
+\hypersetup{colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black,hypertexnames=false,pdftitle={CBSE Mathematics 2015 - Class X and Class XII}}
+\usepackage{amsfonts}
+\makeindex
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\onecolumn
+
+\title{
+  \begin{center}
+    CBSE Mathematics 2015\\
+    \rule{0.4\columnwidth}{0.4pt}\\
+    Class X and Class XII
+  \end{center}
+}
+\author{
+  \vspace{2cm}
+  \begin{center}
+    \includegraphics[width=0.18\columnwidth]{figs/logo.jpg}\\[4pt]
+    {\large Working solutions and source audit}
+  \end{center}
+}
+\maketitle
+\newpage
+
+\section*{About this working file}
+This project follows the folder and LaTeX conventions used in
+\href{https://github.com/gadepall/ee1010-2026/tree/master/EE26BTECH11202}{the EE1010 course folder}:
+questions and solutions are stored in \texttt{chapters/}; plotting scripts and the
+\texttt{CoordGeo} helper package are under \texttt{codes/}; generated figures are under
+\texttt{figs/}; and the root document imports the style files \texttt{gvv-book.sty}
+and \texttt{gvv.sty}. The figures included here are produced by Python scripts, not drawn
+manually inside the LaTeX questions.
+
+\textbf{Audit status.} The current batch includes Class X questions 1--4 from Section A, question 5 from Section B, and
+Class XII Vectors questions 1--7 from the cited public transcriptions. Class X question 2 has been checked against the official marking scheme. Class XII vector
+questions 1--2 retain source-wording flags and remain conditional. The Class X chord/tangent
+figure has been redrawn with the official point placement and its angle derived accordingly.
+
+\newpage
+\tableofcontents
+\newpage
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section{Class X Mathematics}
+\input{chapters/class10.tex}
+
+\newpage
+\section{Class XII Mathematics}
+\input{chapters/class12.tex}
+
+\end{document}
